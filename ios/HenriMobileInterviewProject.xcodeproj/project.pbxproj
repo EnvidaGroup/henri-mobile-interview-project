@@ -5,21 +5,36 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* HenriMobileInterviewProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* HenriMobileInterviewProjectTests.m */; };
+		0729FE57FD98474DBC4F590D /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69DD4F241DCD4442AD49DF8F /* Fontisto.ttf */; };
+		132883B2416A46C4AEBA6128 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEF84C94247440C782C81AD6 /* Feather.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		2844E7D7C2284454B62C6BD6 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 86179E234D7543AD82D68C21 /* MaterialCommunityIcons.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* HenriMobileInterviewProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* HenriMobileInterviewProjectTests.m */; };
+		36FC261080714C82ADA0E349 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 960A58D6DA3742ABB75CF3C3 /* Octicons.ttf */; };
+		4050097F5B344EE783826B9D /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 539819A507C04586945F001C /* SimpleLineIcons.ttf */; };
 		421B335424B06A27F09B439D /* libPods-HenriMobileInterviewProject-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8786E2464E848DEC04F9C1D2 /* libPods-HenriMobileInterviewProject-tvOS.a */; };
 		4C9FBA404013FD55DED10512 /* libPods-HenriMobileInterviewProject-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 94293C771F736AC1B9C8CD77 /* libPods-HenriMobileInterviewProject-tvOSTests.a */; };
+		4E29A12536EA4C59BA10EA72 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 99E1D31E71A84080A68180C8 /* AntDesign.ttf */; };
+		6F2F0FF1F1D141998372E95A /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9421EB9BD84543B5A4C42125 /* Zocial.ttf */; };
+		8550882DDEDF4AD1A434F6E5 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7553C52CBC304D8783294BD1 /* FontAwesome5_Brands.ttf */; };
 		8954789308553EF1293F2AAA /* libPods-HenriMobileInterviewProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 47AF9A66706326B118BC3D09 /* libPods-HenriMobileInterviewProject.a */; };
+		971CC9D1FCDE42939182834B /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85FAA894DF1741BFB9E47E61 /* FontAwesome5_Regular.ttf */; };
+		987A1AE55D754A8490BB3448 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EDB74BFAB23482ABD8B15B6 /* EvilIcons.ttf */; };
+		9A2BC9E709C348FCA5193821 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 365C383AA3D8498A828DD5BA /* FontAwesome5_Solid.ttf */; };
+		A156CE9589C84E0393DF4F89 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 498F32A1E60347D48D87FDE2 /* Entypo.ttf */; };
+		A4C906DF63904630899036D7 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75B8EB9B4BC941B5BEF651E4 /* MaterialIcons.ttf */; };
 		C8B619B0A3EF6DE40C33A9C9 /* libPods-HenriMobileInterviewProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C6416DDE3CA986E7586C609 /* libPods-HenriMobileInterviewProjectTests.a */; };
+		E757E9790FB54B2EA7FBDE7F /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6137F90CB234670BB41911C /* Foundation.ttf */; };
+		F6BCC9F1D2BF4592AC84B872 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0825E46052894C5584968257 /* Ionicons.ttf */; };
+		F766DC09F2FD44539AF60EED /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF0475E9A5FD4A1AA8B76D82 /* FontAwesome.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +59,8 @@
 		00E356EE1AD99517003FC87E /* HenriMobileInterviewProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HenriMobileInterviewProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* HenriMobileInterviewProjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HenriMobileInterviewProjectTests.m; sourceTree = "<group>"; };
+		0825E46052894C5584968257 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		0EDB74BFAB23482ABD8B15B6 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* HenriMobileInterviewProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HenriMobileInterviewProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = HenriMobileInterviewProject/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = HenriMobileInterviewProject/AppDelegate.m; sourceTree = "<group>"; };
@@ -55,18 +72,32 @@
 		2C67E0CF38BB92330C065B35 /* Pods-HenriMobileInterviewProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HenriMobileInterviewProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-HenriMobileInterviewProjectTests/Pods-HenriMobileInterviewProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* HenriMobileInterviewProject-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HenriMobileInterviewProject-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* HenriMobileInterviewProject-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HenriMobileInterviewProject-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		365C383AA3D8498A828DD5BA /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
 		40F55510706D92FEF6FEC080 /* Pods-HenriMobileInterviewProject-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HenriMobileInterviewProject-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-HenriMobileInterviewProject-tvOSTests/Pods-HenriMobileInterviewProject-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		47AF9A66706326B118BC3D09 /* libPods-HenriMobileInterviewProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HenriMobileInterviewProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		498F32A1E60347D48D87FDE2 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		539819A507C04586945F001C /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		5C6416DDE3CA986E7586C609 /* libPods-HenriMobileInterviewProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HenriMobileInterviewProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		685E1BDAA9176D02FFF5BB8C /* Pods-HenriMobileInterviewProject-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HenriMobileInterviewProject-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-HenriMobileInterviewProject-tvOS/Pods-HenriMobileInterviewProject-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		69DD4F241DCD4442AD49DF8F /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		7183E8390FEEC70B367355C9 /* Pods-HenriMobileInterviewProject-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HenriMobileInterviewProject-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-HenriMobileInterviewProject-tvOSTests/Pods-HenriMobileInterviewProject-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7553C52CBC304D8783294BD1 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
+		75B8EB9B4BC941B5BEF651E4 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		78CDA70229180841D6D35D85 /* Pods-HenriMobileInterviewProject-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HenriMobileInterviewProject-tvOS.release.xcconfig"; path = "Target Support Files/Pods-HenriMobileInterviewProject-tvOS/Pods-HenriMobileInterviewProject-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		85FAA894DF1741BFB9E47E61 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		86179E234D7543AD82D68C21 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		8786E2464E848DEC04F9C1D2 /* libPods-HenriMobileInterviewProject-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HenriMobileInterviewProject-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CACC4FE3E37997435B60F94 /* Pods-HenriMobileInterviewProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HenriMobileInterviewProject.debug.xcconfig"; path = "Target Support Files/Pods-HenriMobileInterviewProject/Pods-HenriMobileInterviewProject.debug.xcconfig"; sourceTree = "<group>"; };
+		9421EB9BD84543B5A4C42125 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		94293C771F736AC1B9C8CD77 /* libPods-HenriMobileInterviewProject-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HenriMobileInterviewProject-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		960A58D6DA3742ABB75CF3C3 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		99E1D31E71A84080A68180C8 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		A222BBB65510680D54DA17BF /* Pods-HenriMobileInterviewProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HenriMobileInterviewProject.release.xcconfig"; path = "Target Support Files/Pods-HenriMobileInterviewProject/Pods-HenriMobileInterviewProject.release.xcconfig"; sourceTree = "<group>"; };
+		C6137F90CB234670BB41911C /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
+		EEF84C94247440C782C81AD6 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		FF0475E9A5FD4A1AA8B76D82 /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +196,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		515B4585F1C9476C9F08C802 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				99E1D31E71A84080A68180C8 /* AntDesign.ttf */,
+				498F32A1E60347D48D87FDE2 /* Entypo.ttf */,
+				0EDB74BFAB23482ABD8B15B6 /* EvilIcons.ttf */,
+				EEF84C94247440C782C81AD6 /* Feather.ttf */,
+				FF0475E9A5FD4A1AA8B76D82 /* FontAwesome.ttf */,
+				7553C52CBC304D8783294BD1 /* FontAwesome5_Brands.ttf */,
+				85FAA894DF1741BFB9E47E61 /* FontAwesome5_Regular.ttf */,
+				365C383AA3D8498A828DD5BA /* FontAwesome5_Solid.ttf */,
+				69DD4F241DCD4442AD49DF8F /* Fontisto.ttf */,
+				C6137F90CB234670BB41911C /* Foundation.ttf */,
+				0825E46052894C5584968257 /* Ionicons.ttf */,
+				86179E234D7543AD82D68C21 /* MaterialCommunityIcons.ttf */,
+				75B8EB9B4BC941B5BEF651E4 /* MaterialIcons.ttf */,
+				960A58D6DA3742ABB75CF3C3 /* Octicons.ttf */,
+				539819A507C04586945F001C /* SimpleLineIcons.ttf */,
+				9421EB9BD84543B5A4C42125 /* Zocial.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +236,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				1BE2137090C82F8EF44C697A /* Pods */,
+				515B4585F1C9476C9F08C802 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -230,6 +286,7 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				7F6E957810F77E6E9564643B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -285,7 +342,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -338,6 +395,22 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				4E29A12536EA4C59BA10EA72 /* AntDesign.ttf in Resources */,
+				A156CE9589C84E0393DF4F89 /* Entypo.ttf in Resources */,
+				987A1AE55D754A8490BB3448 /* EvilIcons.ttf in Resources */,
+				132883B2416A46C4AEBA6128 /* Feather.ttf in Resources */,
+				F766DC09F2FD44539AF60EED /* FontAwesome.ttf in Resources */,
+				8550882DDEDF4AD1A434F6E5 /* FontAwesome5_Brands.ttf in Resources */,
+				971CC9D1FCDE42939182834B /* FontAwesome5_Regular.ttf in Resources */,
+				9A2BC9E709C348FCA5193821 /* FontAwesome5_Solid.ttf in Resources */,
+				0729FE57FD98474DBC4F590D /* Fontisto.ttf in Resources */,
+				E757E9790FB54B2EA7FBDE7F /* Foundation.ttf in Resources */,
+				F6BCC9F1D2BF4592AC84B872 /* Ionicons.ttf in Resources */,
+				2844E7D7C2284454B62C6BD6 /* MaterialCommunityIcons.ttf in Resources */,
+				A4C906DF63904630899036D7 /* MaterialIcons.ttf in Resources */,
+				36FC261080714C82ADA0E349 /* Octicons.ttf in Resources */,
+				4050097F5B344EE783826B9D /* SimpleLineIcons.ttf in Resources */,
+				6F2F0FF1F1D141998372E95A /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +481,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		7F6E957810F77E6E9564643B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HenriMobileInterviewProject/Pods-HenriMobileInterviewProject-resources.sh",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Feather.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Foundation.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Feather.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Brands.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Regular.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Solid.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Fontisto.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Foundation.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Ionicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCommunityIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HenriMobileInterviewProject/Pods-HenriMobileInterviewProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		E5207E0707E65B461F493D09 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
