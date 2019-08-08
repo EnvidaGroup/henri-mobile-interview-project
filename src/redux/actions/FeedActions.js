@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { FETCH_FEED_SUCCESS } from '../types/FeedTypes'
+import { FETCH_FEED_SUCCESS, NEW_POST, DELETE_POST } from '../types/FeedTypes'
 import store from '../../store'
 
 export const getFeed = () => {
@@ -20,6 +20,45 @@ export const getFeed = () => {
       dispatch({
         type: FETCH_FEED_SUCCESS,
         payload: { posts: posts.data, comments: comments.data }
+      })
+    } catch (error) {
+      console.log(error)
+    }
+  }
+}
+
+export const newPost = payload => {
+  return async dispatch => {
+    const { title, body, navigation } = payload
+
+    try {
+      const { data } = await axios.post(
+        'https://jsonplaceholder.typicode.com/posts',
+        { title, body }
+      )
+      const user = store.getState().users.users[0]
+      data.id = new Date()
+
+      dispatch({
+        type: NEW_POST,
+        payload: { ...data, comments: [], user }
+      })
+
+      navigation.pop()
+    } catch (error) {
+      console.log(error)
+    }
+  }
+}
+
+export const deletePost = id => {
+  return async dispatch => {
+    try {
+      await axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`)
+
+      dispatch({
+        type: DELETE_POST,
+        payload: id
       })
     } catch (error) {
       console.log(error)
