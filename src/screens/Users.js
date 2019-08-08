@@ -10,9 +10,13 @@ import {
 } from 'react-native'
 import axios from 'axios'
 import FeatherIcons from 'react-native-vector-icons/Feather'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchUsersSuccess } from '../redux/actions/UsersActions'
 
 const Users = () => {
-  const [users, setUsers] = useState([])
+  const dispatch = useDispatch()
+  const users = useSelector(reduxState => reduxState.users.users)
+
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -21,22 +25,18 @@ const Users = () => {
 
   const getUsers = async () => {
     try {
-      const { data } = await axios.get(
-        'https://jsonplaceholder.typicode.com/users'
-      )
-
-      const { data: dataa2 } = await axios.get(
-        'https://uifaces.co/api?limit=10',
-        {
+      const [users2, faces] = await Promise.all([
+        axios.get('https://jsonplaceholder.typicode.com/users'),
+        axios.get('https://uifaces.co/api?limit=10', {
           headers: { 'X-API-KEY': '097e83266da919afdea31bc2124cee' }
-        }
-      )
-      for (const [i, user] of data.entries()) {
-        user.avatar = dataa2[i].photo
+        })
+      ])
+
+      for (const [i, user] of users2.data.entries()) {
+        user.avatar = faces.data[i].photo
       }
-      console.log(data)
-      console.log(dataa2)
-      setUsers(data)
+
+      dispatch(fetchUsersSuccess(users2.data))
       setLoading(false)
     } catch (error) {
       console.log(error)

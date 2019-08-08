@@ -63,7 +63,19 @@ const Todos = () => {
               marginRight: 15
             }}
           >
-            <Text style={{ fontSize: 18, flex: 1 }}>{todo.item.title}</Text>
+            <Text
+              style={{
+                fontSize: 18,
+                flex: 1,
+                color: !todo.item.completed ? 'black' : 'gray',
+                textDecorationLine: todo.item.completed
+                  ? 'line-through'
+                  : 'none',
+                textDecorationStyle: 'solid'
+              }}
+            >
+              {todo.item.title}
+            </Text>
           </View>
 
           <TouchableOpacity

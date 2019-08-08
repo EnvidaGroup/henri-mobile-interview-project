@@ -1,48 +1,81 @@
-import React, { useEffect, useState } from 'react'
-import { View, Text, ActivityIndicator, FlatList } from 'react-native'
-import axios from 'axios'
+import React, { useEffect } from 'react'
+import { View, Text, ActivityIndicator, FlatList, Image } from 'react-native'
+import { useDispatch, useSelector } from 'react-redux'
+import { getFeed } from '../redux/actions/FeedActions'
 
 const Feed = () => {
-  const [posts, setPosts] = useState([])
-  const [comments, setComments] = useState([])
-  const [loading, setLoading] = useState(true)
+  const dispatch = useDispatch()
+  const { posts, loading } = useSelector(reduxState => reduxState.feed)
 
   useEffect(() => {
-    getPosts()
-    getComments()
+    dispatch(getFeed())
   }, [])
 
-  const getPosts = async () => {
-    try {
-      const { data } = await axios.get(
-        'https://jsonplaceholder.typicode.com/posts'
-      )
-      console.log(data)
-      setPosts(data)
-      setLoading(false)
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
-  const getComments = async () => {
-    try {
-      const { data } = await axios.get(
-        'https://jsonplaceholder.typicode.com/comments'
-      )
-      console.log(data)
-      setComments(data)
-      setLoading(false)
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
-  const renderUser = user => {
+  const renderComment = comment => {
     return (
-      <View>
-        <Text style={{ fontSize: 18 }}>{user.item.title}</Text>
-        <Text>{user.item.completed}</Text>
+      <View
+        style={{
+          borderLeftWidth: 3,
+          borderColor: 'green',
+          marginVertical: 8,
+          paddingHorizontal: 7
+        }}
+      >
+        <Text style={{ fontWeight: '600', marginBottom: 3 }}>
+          {comment.item.email}
+        </Text>
+        <Text>{comment.item.body}</Text>
+      </View>
+    )
+  }
+
+  const renderPost = post => {
+    console.log(post)
+    return (
+      <View
+        style={{
+          padding: 10,
+          borderBottomWidth: 8,
+          borderColor: 'rgb(242, 242, 242)'
+        }}
+      >
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center'
+          }}
+        >
+          <Image
+            source={{ uri: post.item.user.avatar }}
+            style={{
+              height: 40,
+              width: 40,
+              borderRadius: 20,
+              marginRight: 15
+            }}
+          />
+
+          <View>
+            <Text style={{ fontSize: 18, fontWeight: '600', marginBottom: 3 }}>
+              {post.item.user.name}
+            </Text>
+            <Text style={{ color: 'rgb(75, 75, 75)' }}>
+              {post.item.user.email}
+            </Text>
+          </View>
+        </View>
+
+        <Text style={{ fontSize: 18, fontWeight: '600', marginTop: 10 }}>
+          {post.item.title}
+        </Text>
+        <Text style={{ fontSize: 16 }}>{post.item.body}</Text>
+
+        <FlatList
+          data={post.item.comments}
+          style={{ marginTop: 5 }}
+          keyExtractor={comment => comment.id}
+          renderItem={comment => renderComment(comment)}
+        />
       </View>
     )
   }
@@ -54,8 +87,8 @@ const Feed = () => {
       ) : (
         <FlatList
           data={posts}
-          keyExtractor={user => user.id}
-          renderItem={user => renderUser(user)}
+          keyExtractor={post => post.id}
+          renderItem={post => renderPost(post)}
         />
       )}
     </View>
