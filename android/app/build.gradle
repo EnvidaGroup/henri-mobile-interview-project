@@ -76,7 +76,7 @@ import com.android.build.OutputFile
  */
 
 project.ext.react = [
-    entryFile: "index.js",
+ //   entryFile: "App.js",
     enableHermes: false,  // clean and rebuild if changing
 ]
 
@@ -188,6 +188,7 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-background-task')
     implementation project(':react-native-vector-icons')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
