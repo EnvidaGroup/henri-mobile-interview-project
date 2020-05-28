@@ -3,7 +3,19 @@ import {Image, Platform, StyleSheet, Text, TouchableOpacity, View} from 'react-n
 import {ScrollView} from 'react-native-gesture-handler';
 import {connect, useSelector} from "react-redux";
 import UserPost from "../components/UserPost";
-import {ActivityIndicator, Caption, FAB, Provider, Portal} from "react-native-paper";
+import {
+	ActivityIndicator,
+	Caption,
+	FAB,
+	Provider,
+	Portal,
+	Modal,
+	Dialog,
+	Paragraph,
+	Avatar,
+	Button,
+	TextInput
+} from "react-native-paper";
 import store from "../store/store";
 import axios from "axios";
 
@@ -16,13 +28,21 @@ import axios from "axios";
 
 function HomeScreen() {
 
+	const [addingPost, setAddingPost] = React.useState(false)
+	const [fabOpen, setFabOpen] = React.useState(false)
+	const [newPostModalOpen, setNewPostModalOpen] = React.useState(false)
 	const users = useSelector(state => state.users.usersData);
 	const userImages = useSelector(state => state.users.userImages);
 	const posts = useSelector(state => state.posts.postsData);
-	const [fabOpen, setFabOpen] = React.useState(false)
 	const commentData = useSelector(state => state.comments.commentData);
 	const isLoadingPosts = useSelector(state => state.posts.loadingPosts);
 	const isLoadingUsers = useSelector(state => state.users.loadingUsers);
+	const [newPostTitle, setNewPostTitle] = React.useState('')
+	const [newPostBody, setNewPostBody] = React.useState('')
+
+	function getRandomInt(max) {
+		return Math.floor(Math.random() * Math.floor(max));
+	}
 
 	// Send, Save, and fetch "Feed" (Posts) from endpoint and send to redux store
 	const fetchPosts = async () => {
@@ -51,23 +71,45 @@ function HomeScreen() {
 			.catch(e => console.error(e))
 	}
 
-	const addPost = async (newPost) => {
-		let updatedPosts = posts.slice().push(newPost)
+	const addPost = async () => {
+		setAddingPost(true)
+		let newId = Math.max(posts.map(post => post.id)) + 1
+		let newPostUserId = users[getRandomInt(10)].id
+
+		let newPost = {
+			body: newPostBody,
+			title: newPostTitle,
+			postId: newId,
+			userId: newPostUserId,
+			avatar: users[newPostUserId].photo,
+			name: users[newPostUserId].name
+		}
+
+		let updatedPosts = posts.slice()
 		const addNewFeedPost = async () => {
 			const addNewPost = () => {
 				return {
 					type: 'ADD_POST',
-					payload: updatedPosts
+					payload: updatedPosts.concat(newPost)
 				}
 			}
 			store.dispatch(addNewPost())
 		}
-		await axios.post('https://jsonplaceholder.typicode.com/posts', newPost)
-			.then(res => console.log(res))
-			.then(res => {
-				addNewFeedPost()
-			})
+		await fetch('https://jsonplaceholder.typicode.com/posts', {
+			method: 'POST',
+			body: JSON.stringify(newPost),
+			headers: {
+				"Content-type": "application/json; charset=UTF-8"
+			}
+		})
+			.then(response => response.json() && setAddingPost(false))
+			.then(json => console.log(json))
 			.catch(e => console.error('"Add Post": ', e))
+
+		await addNewFeedPost()
+		setNewPostModalOpen(false)
+		setNewPostBody('')
+		setNewPostTitle('')
 	}
 
 	const deletePost = async (post) => {
@@ -188,8 +230,6 @@ function HomeScreen() {
 	}, [])
 
 	React.useEffect(() => {
-		// fetchUsers()
-      let syncTimer;
 		 if (users === undefined || users === null || users.length === 0 || userImages === null) {
 		   return () => {}
          } else {
@@ -220,8 +260,42 @@ function HomeScreen() {
       }
 	}, [users, userImages])
 
+	React.useEffect(() => {
+		console.log(`Title: ${newPostTitle}`, `Body: ${newPostBody}`)
+	},[newPostBody, newPostTitle])
+
 	return (
 		<View style={styles.container}>
+			<Portal>
+				<Dialog visible={newPostModalOpen} onDismiss={() => setNewPostModalOpen(false)}>
+					<Dialog.Title>Whats the new post?</Dialog.Title>
+					<Dialog.Content>
+						<TextInput
+							style={{marginBottom: '3%'}}
+							mode='outlined'
+							value={newPostTitle}
+							label='Title'
+							onChangeText={text => setNewPostTitle(text)}
+						/>
+						<TextInput
+							mode='outlined'
+							value={newPostBody}
+							multiline
+							placeholder='Whats on your mind?'
+							label='Description'
+							onChangeText={text => setNewPostBody(text)}
+					/>
+					</Dialog.Content>
+					<Dialog.Actions>
+						<Button onPress={() => {
+							setNewPostTitle('')
+							setNewPostBody('')
+							setNewPostModalOpen(false)
+						}}>Cancel</Button>
+						<Button loading={addingPost} onPress={() => addPost()}>Post</Button>
+					</Dialog.Actions>
+				</Dialog>
+			</Portal>
 			<ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
 
 				<View style={styles.welcomeContainer}>
@@ -255,11 +329,11 @@ function HomeScreen() {
 
 			</ScrollView>
 			<FAB.Group
-				fabStyle={styles.fab} open={fabOpen} icon={fabOpen ? 'calendar-today' : 'plus'} actions={[
-				{icon: 'plus', onPress: () => console.log('Pressed add')},
-				{icon: 'star', label: 'Star', onPress: () => console.log('Pressed star')},
-				{icon: 'email', label: 'Email', onPress: () => console.log('Pressed email')},
-				{icon: 'bell', label: 'Remind', onPress: () => console.log('Pressed notifications')},
+				fabStyle={styles.fab} open={fabOpen} icon={fabOpen ? 'close' : 'plus'} actions={[
+				// {icon: 'close', onPress: () => console.log('Pressed add')},
+				// {icon: 'star', label: 'Star', onPress: () => console.log('Pressed star')},
+				// {icon: 'email', label: 'Email', onPress: () => console.log('Pressed email')},
+				{icon: 'note-plus-outline', label: `📝 New Post ` , onPress: () => setNewPostModalOpen(true)},
 			]} onStateChange={() => setFabOpen((prevState => !prevState))} onPress={() => {
 				if (fabOpen) {
 					// do something if the speed dial is open

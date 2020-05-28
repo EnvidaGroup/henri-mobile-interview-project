@@ -1,7 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import {Avatar, Divider, Caption, Paragraph, Button, Card, Title, Menu, Portal, Dialog} from 'react-native-paper';
+import {
+	Avatar,
+	Divider,
+	Caption,
+	Paragraph,
+	Button,
+	Card,
+	Title,
+	Menu,
+	Portal,
+	Dialog,
+	IconButton
+} from 'react-native-paper';
 import StyledText from "react-native-paper/src/components/Typography/StyledText";
 const UserPost = props => {
 const [postOptionsOpen, setPostOptionsOpen] = React.useState(false)
@@ -23,7 +35,7 @@ const deletePost = (postId) => {
 const PostOptions = () => {
 	return (
 		<View>
-			<Button icon='dots-vertical' onPress={setPostOptionsOpen()}/>
+			<IconButton size={22} icon='dots-vertical' onPress={setPostOptionsOpen()}/>
 		</View>
 	)
 }
@@ -51,9 +63,9 @@ const getComments = (post) => {
 				</Card.Content>
 
 				<Card.Actions style={{justifyContent: 'space-evenly'}}>
-					<Button mode='text' icon='thumb-up-outline' color='black' />
+					<IconButton size={22} icon='thumb-up-outline' color='black' />
 					<Button mode='outlined' color='#2e78b7' >Comment</Button>
-					<Button mode='text' icon='thumb-down-outline' color='black' />
+					<IconButton size={22} icon='thumb-down-outline' color='black' />
 				</Card.Actions>
 				<Portal>
 					<Dialog
