@@ -86,10 +86,10 @@ There is an app-sample.png photo in the root of the repo. It's just meant to pro
 
 ## Upon Completion
 
-When completed, create a GitHub repo and send to projects@henrihome.com with your name/info.
+When completed, create a GitHub repo and send to d.shostack@henrihome.com with your name/info.
 
 ## Contact
 
 We are here to answer any questions throughout the process, especially if something is not clear or doesn't make sense.
 
-You can reach us at projects@henrihome.com.
+You can reach us at d.shostack@henrihome.com.
