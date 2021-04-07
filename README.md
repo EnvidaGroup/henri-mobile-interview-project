@@ -8,6 +8,8 @@ We expect the project to take anywhere from 3-6 hours depending on experience. F
 
 Overall we will be evaluating the entire package: code quality and architecture are the most important, but UI work is also necessary. Aim to be well rounded instead of perfection in a single area. If you find yourself far exceeding the time constraints, then consider reducing the quality.
 
+The project is list heavy, so please make sure that you are up to date with optimized react native lists https://reactnative.dev/docs/optimizing-flatlist-configuration
+
 ## Summary
 
 The project will consist of three tabs:
