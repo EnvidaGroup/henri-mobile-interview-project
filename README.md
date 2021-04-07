@@ -4,9 +4,9 @@ Thank you for taking the time to complete this project and considering joining o
 
 The intention for this project is to get a good baseline of your React Native and JavaScript skills.
 
-We expect the project to take anywhere from 2-5 hours depending on experience. Feel free to dedicate what you want - but it shouldn't feel like a burden.
+We expect the project to take anywhere from 3-6 hours depending on experience. Feel free to dedicate what you want - but it shouldn't feel like a burden.
 
-Overall we will be evaluating the entire package: UI design, code quality, and architecture. Aim to be well rounded instead of perfection in a single area. If you find yourself far exceeding the time constraints, then consider reducing the quality.
+Overall we will be evaluating the entire package: code quality and architecture are the most important, but UI work is also necessary. Aim to be well rounded instead of perfection in a single area. If you find yourself far exceeding the time constraints, then consider reducing the quality.
 
 ## Summary
 
